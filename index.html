@@ -1,0 +1,91 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <h1>Age Calculator</h1>
+    <main class="container">
+        <div class="input">
+            <!-- birthday -->
+            <!-- <label for="birthday">Enter your birthday</label>
+            <input type="date" id="birthday">
+        </div>
+        <ul>
+            <li>Years :=<span id="years">Years</span></li>
+            <li>Months :=<span id="months">Months</span></li>
+            <li>Days :=<span id="days">Days</span></li>
+            <li>Hours :=<span id="hours">Hours</span></li>
+            <li>Minutes :=<span id="minutes">Minutes</span></li>
+            <li>seconds :=<span id="seconds">Secounds</span></li>
+        </ul>
+        <!-- Buttons -->
+    <!-- <div class="btns">
+        <button onclick="calculate()">Calculate</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html> --> 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fade-in-and-out Rotating Marquee</title>
+<style>
+#marquee {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #000000;
+  opacity: 0;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+  var sentences = [
+    "This is sentence 1.",
+    "This is sentence 2.",
+    "This is sentence 3.",
+  ];
+  var currentSentence = 0;
+  var marquee = $("#marquee");
+
+  function marqueePlay() {
+    // Fade out the current sentence.
+    marquee.css("opacity", 0);
+
+    // Set the text of the marquee to the next sentence.
+    marquee.text(sentences[currentSentence]);
+
+    // Fade in the next sentence.
+    setTimeout(function() {
+      marquee.css("opacity", 1);
+      currentSentence++;
+      if (currentSentence >= sentences.length) {
+        currentSentence = 0;
+      }
+      marqueePlay();
+    }, 2000);
+  }
+
+  marqueePlay();
+});
+</script>
+</head>
+<body>
+<div id="marquee">hello</div>
+</body>
+</html>
+
